@@ -1,0 +1,15 @@
+<div class="c-filters">
+  <form [formGroup]="recipeFilters">
+    <fieldset>
+      <legend>Filters</legend>
+      <div class="mb-4">
+        <p-button label="Clear all"></p-button>
+      </div>
+      <div class="p-float-label">
+        <input type="text" id="title" formControlName="title" pInputText>
+        <label for="title">Keyword</label>
+      </div>
+      <p-button (onClick)="filterResults()" label="See results"></p-button>
+    </fieldset>
+  </form>
+</div>

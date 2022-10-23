@@ -9,12 +9,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataViewModule } from 'primeng/dataview';
 import { CardModule } from 'primeng/card';
+import { RecipesFilterComponent } from './recipes-filter/recipes-filter.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipesListComponent,
-    HomeComponent
+    HomeComponent,
+    RecipesFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,12 @@ import { CardModule } from 'primeng/card';
     BrowserAnimationsModule,
     DataViewModule,
     CardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ButtonModule,
+    DropdownModule,
+    InputTextModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
