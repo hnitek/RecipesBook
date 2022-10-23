@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataViewModule } from 'primeng/dataview';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DataViewModule } from 'primeng/dataview';
     HttpClientModule,
     BrowserAnimationsModule,
     DataViewModule,
+    CardModule,
     AppRoutingModule
   ],
   providers: [],
