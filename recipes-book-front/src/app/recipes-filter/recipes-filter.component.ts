@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
 import { RecipeService } from '../core/services/recipe.service';
 
 @Component({
@@ -9,18 +9,18 @@ import { RecipeService } from '../core/services/recipe.service';
 })
 export class RecipesFilterComponent {
   recipeFilters = this.fb.group({
-    title: [''],
-    category: [''],
-    ingredient: [''],
-    tags: [''],
-    prepTime: [''],
-    cookingTime: ['']
+    title: new FormControl('', { nonNullable: true }),
+    // category: [''],
+    // ingredient: [''],
+    // tags: [''],
+    // prepTime: [''],
+    // cookingTime: ['']
   });
 
   constructor(private fb: FormBuilder, private recipeService: RecipeService) { }
 
   filterResults(): void {
-
+    this.recipeService.updateFilters(this.recipeFilters.value);
   }
 
 }
